@@ -1,11 +1,15 @@
 
-/* Header Contact Bar */
 .header-contact-bar {
     background: linear-gradient(90deg, #1a1a2e, #16213e);
     color: #f39c12;
-    padding: 8px 0;
-    font-size: 14px;
-    border-bottom: 2px solid #e74c3c;
+    padding: 25px 0;
+    font-size: 18px;
+    border-bottom: 4px solid #e74c3c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 
 .contact-info {
@@ -21,33 +25,22 @@
     gap: 5px;
 }
 
-/* Header Banner */
+
 .custom-header-banner {
     background: linear-gradient(45deg, #e74c3c, #f39c12, #9b59b6);
     color: white;
-    padding: 12px 0;
+    padding: 40px 0;
     text-align: center;
-    animation: musicPulse 3s infinite;
-    background-size: 200% 200%;
-    animation: musicGradient 4s ease infinite;
+    margin-top: 80px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
 }
 
 .header-promo {
     margin: 0;
     font-weight: bold;
-    font-size: 16px;
-}
-
-@keyframes musicPulse {
-    0% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.9; transform: scale(1.02); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-@keyframes musicGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    font-size: 24px;
 }
 
 /* Footer Styles */
@@ -212,19 +205,7 @@
     font-size: 14px;
 }
 
-.pulse-dot {
-    width: 10px;
-    height: 10px;
-    background: #e74c3c;
-    border-radius: 50%;
-    animation: livePulse 1.5s infinite;
-}
 
-@keyframes livePulse {
-    0% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.2); }
-    100% { opacity: 1; transform: scale(1); }
-}
 
 .footer-bottom {
     display: flex;
@@ -244,19 +225,243 @@
     margin-top: 5px;
 }
 
-.back-to-top {
-    color: #f39c12;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
-    padding: 8px 15px;
-    border: 1px solid #f39c12;
-    border-radius: 20px;
+
+
+/* Don Toliver  */
+.don-toliver-showcase {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    padding: 120px 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
 }
 
-.back-to-top:hover {
-    color: #1a1a2e;
-    background: #f39c12;
-    transform: translateY(-3px);
+.artist-hero-section {
+    position: relative;
+    z-index: 2;
+}
+
+.artist-content {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.artist-image-container {
+    position: relative;
+}
+
+.artist-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(243, 156, 18, 0.4);
+    border: 6px solid #f39c12;
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artist-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #e74c3c, #f39c12, #9b59b6);
+    font-size: 120px;
+}
+
+.artist-badge {
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.artist-info h2 {
+    color: #f39c12;
+    font-size: 72px;
+    margin: 0 0 20px 0;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.artist-genre {
+    color: #e74c3c;
+    font-size: 28px;
+    margin: 0 0 35px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.artist-bio {
+    color: #ecf0f1;
+    font-size: 22px;
+    line-height: 1.7;
+    margin: 0 0 50px 0;
+    max-width: 700px;
+}
+
+.artist-stats {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .number {
+    display: block;
+    color: #f39c12;
+    font-size: 42px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.stat .label {
+    color: #bdc3c7;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.artist-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-listen, .btn-follow {
+    padding: 20px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid transparent;
+}
+
+.btn-listen {
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    color: white;
+    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+}
+
+.btn-follow {
+    background: transparent;
+    color: #f39c12;
+    border-color: #f39c12;
+}
+
+/* Latest Track Section */
+.latest-track {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.latest-track h3 {
+    color: #f39c12;
+    font-size: 48px;
+    margin-bottom: 60px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.track-card {
+    background: rgba(52, 73, 94, 0.9);
+    border-radius: 20px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    align-items: center;
+    border: 3px solid #f39c12;
+    backdrop-filter: blur(10px);
+}
+
+.track-cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.track-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    font-size: 80px;
+}
+
+.track-info {
+    text-align: left;
+}
+
+.track-info h4 {
+    color: #f39c12;
+    font-size: 36px;
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+
+.track-info p {
+    color: #bdc3c7;
+    margin: 0 0 35px 0;
+    font-size: 20px;
+}
+
+.streaming-platforms {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.platform {
+    background: rgba(243, 156, 18, 0.2);
+    color: #f39c12;
+    padding: 12px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border: 2px solid #f39c12;
+}
+
+/* Ensure main site content is pushed down */
+body {
+    padding-top: 80px;
+}
+
+/* Hide default Astra header  */
+.ast-main-header-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+/* artist section size   */
+.don-toliver-showcase .ast-container {
+    max-width: 100%;
+    padding: 0 40px;
 }
 
