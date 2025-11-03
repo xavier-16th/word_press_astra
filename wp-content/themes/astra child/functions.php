@@ -40,6 +40,70 @@ function astra_child_header_contact() { ?>
     </div>
 <?php }
 
+// Don Toliver main page showcase
+add_action( 'astra_content_before', 'astra_child_don_toliver_showcase' );
+
+function astra_child_don_toliver_showcase() {
+    if ( is_front_page() ) { ?>
+        <div class="don-toliver-showcase">
+            <div class="ast-container">
+                <div class="artist-hero-section">
+                    <div class="artist-content">
+                        <div class="artist-image-container">
+                            <div class="artist-image">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/don-toliver.jpg" alt="Don Toliver" onerror="this.style.display='none'">
+                                <div class="artist-icon">🎤</div>
+                            </div>
+                        </div>
+                        <div class="artist-info">
+                            <div class="artist-badge">🔥 FEATURED ARTIST</div>
+                            <h2>Don Toliver</h2>
+                            <p class="artist-genre">Hip-Hop • R&B • Trap</p>
+                            <p class="artist-bio">
+                                Découvrez l'univers unique de Don Toliver, l'une des étoiles montantes du rap et R&B contemporain. 
+                                Connu pour ses mélodies accrocheuses et son style distinctif, il continue de redéfinir le son moderne.
+                            </p>
+                            <div class="artist-stats">
+                                <div class="stat">
+                                    <span class="number">45M+</span>
+                                    <span class="label">Monthly Listeners</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">3</span>
+                                    <span class="label">Albums</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">2.1B+</span>
+                                    <span class="label">Total Streams</span>
+                                </div>
+                            </div>
+                            <div class="artist-actions">
+                                <a href="#" class="btn-listen">🎵 Listen Now</a>
+                                <a href="#" class="btn-follow">📱 Follow</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Latest Track Section -->
+                    <div class="latest-track">
+                        
+                        <div class="track-card">
+                            <div class="track-cover">
+                                <div class="track-icon">💿</div>
+                            </div>
+                            <div class="track-info">
+                                <h4>"no pole" solo song </h4>
+                                <p>From the album "lovesickness" </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php }
+}
+
 
 add_action( 'wp', function () {
     // Supprime toutes les callbacks déjà ajoutées au hook astra_footer
@@ -93,13 +157,7 @@ function astra_child_footer_markup() { ?>
                     <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram">� Instagram</a>
                     <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook">� Facebook</a>
                 </div>
-                <div class="footer-stats">
-                    <p><strong>🎼 Équipement Pro</strong></p>
-                    <p>• Console SSL 4000 G+<br>• Pro Tools HDX<br>• + 50 micros vintage</p>
-                    <div class="live-indicator">
-                        <span class="pulse-dot"></span>
-                        <span>🔴 En direct actuellement</span>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -110,9 +168,7 @@ function astra_child_footer_markup() { ?>
                 <p>&copy; <?php echo date('Y'); ?> - <?php bloginfo('name'); ?> Studio | 🎵 Tous droits réservés</p>
                 <p class="small-text">SACEM • SPEDIDAM • Licence spectacles: 2-123456</p>
             </div>
-            <div class="footer-back-to-top">
-                <a href="#top" class="back-to-top">🎶 Haut de page</a>
-            </div>
+
         </div>
     </footer>
 <?php }
