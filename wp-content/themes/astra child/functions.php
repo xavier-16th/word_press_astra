@@ -10,7 +10,7 @@ add_action( 'wp_enqueue_scripts', function () {
         wp_get_theme()->get( 'Version' )
     );
 }, 20 );
-
+ 
 /** HEADER CUSTOMIZATION */
 // Add custom header content
 add_action( 'astra_header_markup_after', 'astra_child_header_banner' );
